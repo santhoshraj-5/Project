@@ -14,10 +14,10 @@ import com.pageobjects.NoteBookProductPage;
 import com.utility.Log;
 
 public class MacbookTest extends Base{
-	HomePage homepage;
-	ComputersPage computerpage;
+	HomePage home_page;
+	ComputersPage computer_page;
 	Comp_NotebookPage notebook;
-	NoteBookProductPage productpage;
+	NoteBookProductPage product_page;
 	
 	@Parameters("browser")
 	@BeforeMethod(groups = {"Smoke","Sanity","Regression"})
@@ -34,22 +34,22 @@ public class MacbookTest extends Base{
 	 * this method will click macbook product and then enter quantity and verify the page title and success msg
 	 */
 	@Test(groups="Regression")
-	public void producttest() {
-		Log.startTestCase("producttest");
-		homepage= new HomePage();
-		notebook=homepage.clickNotebook();
-		productpage=notebook.ClickMacbook();
-		String productPage_title=productpage.gettitle();
+	public void addProductToCart() {
+		Log.startTestCase("addProductToCart");
+		home_page= new HomePage();
+		notebook=home_page.clickNotebook();
+		product_page=notebook.ClickMacbook();
+		String productPage_title=product_page.gettitle();
 		Assert.assertEquals(productPage_title,prop.getProperty("productpagetitle"));
-		String Actual_productname=productpage.CheckProductName();
-		productpage.EnterQuantity("2");
+		String Actual_productname=product_page.CheckProductName();
+		product_page.EnterQuantity("2");
 		Log.info("product quantity is entered");
-		productpage.ClickAddToCart();
-		String success_msg=productpage.ProdutAddedSuccessfully();
+		product_page.ClickAddToCart();
+		String success_msg=product_page.ProdutAddedSuccessfully();
 		Assert.assertEquals(success_msg, "The product has been added to your shopping cart");
 		Assert.assertEquals(Actual_productname,prop.getProperty("productname")); 
 		//productpage.ClickShoppingCart();
-		Log.endTestCase("producttest");
+		Log.endTestCase("addProductToCart");
 		
 	}
 }

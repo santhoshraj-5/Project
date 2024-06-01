@@ -7,7 +7,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import com.actiondriver.SeleniumactionsImplemented;
+import com.actiondriver.Seleniumactions;
 
 
 public class Listener implements ITestListener{
@@ -23,7 +23,7 @@ public class Listener implements ITestListener{
 	public void onTestFailure(ITestResult result) {
 		//after one test method fail
 		 System.out.println("on test fail listner");
-		 SeleniumactionsImplemented action=new SeleniumactionsImplemented();
+		 Seleniumactions action=new Seleniumactions();
 		 try {
 			action.take_screenshot(result.getName());
 		} catch (IOException e) {

@@ -17,7 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.base.Base;
 
-public class SeleniumactionsImplemented extends Base implements SeleniumactionInterface {
+public class Seleniumactions extends Base implements Seleniumaction {
 	Actions action;
 	WebDriverWait wait;
 

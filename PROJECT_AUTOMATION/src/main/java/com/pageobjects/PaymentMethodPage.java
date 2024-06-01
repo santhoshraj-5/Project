@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.actiondriver.SeleniumactionsImplemented;
+import com.actiondriver.Seleniumactions;
 import com.base.Base;
 
 public class PaymentMethodPage extends Base{
@@ -20,7 +20,7 @@ public class PaymentMethodPage extends Base{
 	}
 	
 //to access all the actions to perform created object for SeleniumactionsImplemented
-	SeleniumactionsImplemented action= new SeleniumactionsImplemented();
+	Seleniumactions action= new Seleniumactions();
 	
 //actions to be performed 
 	//to do add check method 

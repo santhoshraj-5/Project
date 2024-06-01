@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import org.openqa.selenium.WebElement;
 
-public interface SeleniumactionInterface {
+public interface Seleniumaction {
 	void click(WebElement element);
 	void sendkeys(WebElement element, String value);
 	void appendtext(WebElement element,String value);

@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.actiondriver.SeleniumactionsImplemented;
+import com.actiondriver.Seleniumactions;
 import com.base.Base;
 
 public class Comp_DesktopsPage extends Base {
@@ -25,7 +25,7 @@ public class Comp_DesktopsPage extends Base {
 		PageFactory.initElements(getDriver(), this);
 	}
 //to access all the actions to perform created object for SeleniumactionsImplemented
-	SeleniumactionsImplemented action=new SeleniumactionsImplemented();
+	Seleniumactions action=new Seleniumactions();
 
 //actions to be performed 
 	public void SortProduct(String sorttype) {

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.actiondriver.SeleniumactionsImplemented;
+import com.actiondriver.Seleniumactions;
 import com.base.Base;
 
 public class RegisterPage extends Base{
@@ -31,7 +31,7 @@ public class RegisterPage extends Base{
 	}
 	
 //to access all the actions to perform created object for SeleniumactionsImplemented
-	SeleniumactionsImplemented action = new SeleniumactionsImplemented();
+	Seleniumactions action = new Seleniumactions();
 	/** 
 	 * @param gender-enter male or female
 	 */

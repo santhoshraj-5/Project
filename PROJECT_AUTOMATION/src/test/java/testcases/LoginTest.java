@@ -13,8 +13,8 @@ import com.pageobjects.LoginPage;
 import com.utility.Log;
 
 public class LoginTest extends Base {
-	HomePage home;
-	LoginPage loginpage;
+	HomePage home_page;
+	LoginPage login_page;
 	
 @Parameters("browser")
 	@BeforeMethod(groups = {"Smoke","Sanity","Regression"})
@@ -39,13 +39,13 @@ public class LoginTest extends Base {
 	@Test(dataProvider = "loginsenarious", dataProviderClass = Dataprovider.class,groups = "Sanity")
 	public void loginTest(String Email, String Password) {
 		Log.startTestCase("loginTest");
-		home = new HomePage();
-		loginpage = home.clickLoginPage();
-		home = loginpage.login(Email, Password);
+		home_page = new HomePage();
+		login_page = home_page.clickLoginPage();
+		home_page = login_page.login(Email, Password);
 		Log.info("user password and email is entered");
-		String actualtitle = loginpage.gettitle();
+		String actualtitle = login_page.gettitle();
 		String expectedtitle = prop.getProperty("homepagetitle");
-		boolean error = loginpage.errormsgDisplayed();
+		boolean error = login_page.errormsgDisplayed();
 
 		/**
 		 * we will we having only two scenario 1,successful login and the title of the
@@ -68,11 +68,11 @@ public class LoginTest extends Base {
 	  @Test(groups="Regression")
 	   public void loginTestpostive() { 
 		  Log.startTestCase("loginTestpostive");
-		  home = new HomePage(); 
-		  loginpage = home.clickLoginPage();
-		  home =loginpage.login("santa@gmail.com", "123456"); 
+		  home_page = new HomePage(); 
+		  login_page = home_page.clickLoginPage();
+		  home_page =login_page.login("santa@gmail.com", "123456"); 
 		  Log.info("user password and email is entered");
-		  String actualtitle = loginpage.gettitle();
+		  String actualtitle = login_page.gettitle();
 		  System.out.println(actualtitle); 
 		  String expectedtitle =prop.getProperty("homepagetitle"); 
 		  Assert.assertEquals(actualtitle, expectedtitle);

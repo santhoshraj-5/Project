@@ -14,8 +14,8 @@ import com.utility.Log;
 
 //@Listeners(com.utility.Listener.class)
 public class ComputerPageTest extends Base {
-	 HomePage homepage;
-	ComputersPage computerpage;
+	 HomePage home_page;
+	ComputersPage computer_page;
 	
 	@Parameters("browser")
 	@BeforeMethod(groups = {"Smoke","Sanity","Regression"})
@@ -37,20 +37,20 @@ public class ComputerPageTest extends Base {
 	@Test(groups = "Smoke")
 	public void checkImageAndTextPresent() {
 		Log.startTestCase("checkImageAndTextPresent");
-		 homepage=new HomePage();
-		 computerpage= homepage.clickcomputer();
-		 boolean des_img=computerpage.CheckDesktopimg();
+		 home_page=new HomePage();
+		 computer_page= home_page.clickcomputer();
+		 boolean des_img=computer_page.CheckDesktopimg();
 		 Assert.assertEquals(des_img, true);
 		 Log.info("desktop image checked");
-		 boolean des_text= computerpage.CheckDesktopText();
+		 boolean des_text= computer_page.CheckDesktopText();
 		 Assert.assertEquals(des_text, true);
-		 boolean note_img= computerpage.CheckNotebookimg();
+		 boolean note_img= computer_page.CheckNotebookimg();
 		 Assert.assertEquals(note_img, true);
-		 boolean note_text= computerpage.CheckNotebookText();
+		 boolean note_text= computer_page.CheckNotebookText();
 		 Assert.assertEquals(note_text, true);
-		 boolean soft_img =computerpage.CheckSoftwareimg();
+		 boolean soft_img =computer_page.CheckSoftwareimg();
 		 Assert.assertEquals(soft_img, true);
-		 boolean soft_text= computerpage.CheckSoftwareText();
+		 boolean soft_text= computer_page.CheckSoftwareText();
 		 Assert.assertEquals(soft_text, true);
 		 Log.info("all Image and text is checked");
 		 Log.endTestCase("checkImageAndTextPresent");
@@ -62,15 +62,15 @@ public class ComputerPageTest extends Base {
 	@Test(groups = "Smoke")
 	public void checkNavigation() {
 		Log.startTestCase("checkNavigation");
-		homepage=new HomePage();
-		 computerpage= homepage.clickcomputer();
-		computerpage.ClickDesktop();
+		home_page=new HomePage();
+		 computer_page= home_page.clickcomputer();
+		computer_page.ClickDesktop();
 		Assert.assertEquals(getDriver().getCurrentUrl(), prop.getProperty("desktop_url"));
 		getDriver().navigate().back();
-		computerpage.ClickNotebook();
+		computer_page.ClickNotebook();
 		Assert.assertEquals(getDriver().getCurrentUrl(), prop.getProperty("notebook_url"));
 		getDriver().navigate().back();
-		computerpage.ClickSoftware();
+		computer_page.ClickSoftware();
 		Assert.assertEquals(getDriver().getCurrentUrl(), prop.getProperty("software_url"));
 		getDriver().navigate().back();
 		Log.endTestCase("checkNavigation");

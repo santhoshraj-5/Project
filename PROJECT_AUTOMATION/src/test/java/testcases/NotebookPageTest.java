@@ -13,8 +13,8 @@ import com.pageobjects.HomePage;
 import com.utility.Log;
 
 public class NotebookPageTest extends Base {
-	HomePage homepage;
-	ComputersPage computerpage;
+	HomePage home_page;
+	ComputersPage computer_page;
 	Comp_NotebookPage notebook;
 	
 	@Parameters("browser")
@@ -34,12 +34,12 @@ public class NotebookPageTest extends Base {
 	@Test(groups="Smoke")
 	public void computerTest() {
 		Log.startTestCase("computerTest");
-		homepage= new HomePage();
-		computerpage=homepage.clickcomputer();
-		String subcategory=computerpage.GetTextInSubCategory();
+		home_page= new HomePage();
+		computer_page=home_page.clickcomputer();
+		String subcategory=computer_page.GetTextInSubCategory();
 		System.out.println("subcategory of computers are-"+subcategory);
-		System.out.println("count of sub category-"+computerpage.GetTotalSubCategory());
-		notebook=computerpage.ClickNotebook();
+		System.out.println("count of sub category-"+computer_page.GetTotalSubCategory());
+		notebook=computer_page.ClickNotebook();
 		boolean allimagepresent=notebook.CheckallProductIMGDiaplayed();
 		Assert.assertTrue(allimagepresent);
 		boolean allpricedisplay=notebook.CheckallProductpriceDisplayed();

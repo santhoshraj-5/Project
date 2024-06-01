@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.actiondriver.SeleniumactionsImplemented;
+import com.actiondriver.Seleniumactions;
 import com.base.Base;
 
 public class ShoppingCartPage extends Base{
@@ -21,7 +21,7 @@ public class ShoppingCartPage extends Base{
 	}
 	
 //to access all the actions to perform created object for SeleniumactionsImplemented
-	SeleniumactionsImplemented action=new SeleniumactionsImplemented();
+	Seleniumactions action=new Seleniumactions();
 
 	//todo- add remove edit functionality of cart page using table ....only first product is done we need to for dynamic product
 	public BillingAddressPage ClickCheckout() {

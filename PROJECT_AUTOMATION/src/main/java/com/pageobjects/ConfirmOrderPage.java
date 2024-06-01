@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.actiondriver.SeleniumactionsImplemented;
+import com.actiondriver.Seleniumactions;
 import com.base.Base;
 
 public class ConfirmOrderPage extends Base {
@@ -22,7 +22,7 @@ public class ConfirmOrderPage extends Base {
 	}
 	
 //to access all the actions to perform created object for SeleniumactionsImplemented	
-	SeleniumactionsImplemented action =new SeleniumactionsImplemented();
+	Seleniumactions action =new Seleniumactions();
 
 //methods to perform 	
 	public PaymentInfoPage ClickBack() {
@@ -37,7 +37,7 @@ public class ConfirmOrderPage extends Base {
 	public HomePage ClickContinue() {
 		//we are getting StaleElementException so used wait and the performed js click
 		action.waitTillvisible(continue_btn);
-		//JavascriptExecutor js= (JavascriptExecutor)driver;
+		//JavascriptExecutor js= (JavascriptExecutor)getDriver();
 		//js.executeScript("arguments[0].click();", continue_btn);//just a try with jsexecuter
 		action.click(continue_btn);
 		return new HomePage();

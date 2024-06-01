@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.actiondriver.SeleniumactionsImplemented;
+import com.actiondriver.Seleniumactions;
 import com.base.Base;
 
 public class PaymentInfoPage extends Base {
@@ -17,7 +17,7 @@ public class PaymentInfoPage extends Base {
 	}
 	
 //Initializing webelements and driver object 
-	SeleniumactionsImplemented action= new SeleniumactionsImplemented();
+	Seleniumactions action= new Seleniumactions();
 	
 	//actions to be performed 
 	//To-do get the info text and validate 

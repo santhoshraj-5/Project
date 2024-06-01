@@ -14,8 +14,8 @@ import com.pageobjects.RegisterPage;
 import com.utility.Log;
 
 public class RegisterTest extends Base {
-	HomePage home;
-	RegisterPage registerpage;
+	HomePage home_page;
+	RegisterPage register_page;
 
 	@BeforeMethod(groups = {"Smoke","Sanity","Regression"})
 	public void before() {
@@ -57,14 +57,14 @@ public class RegisterTest extends Base {
 	  public void register(String Gender,String fname,String lname, String
 	  date,String month,String year, String email,String pass,String re_pass){
 		  Log.startTestCase("register");
-	  home=new HomePage(); 
-	  registerpage=home.ClickRegisterButton();
-	  registerpage.CompleteRegister(Gender,fname,lname,date,month,year,email,pass,
+	  home_page=new HomePage(); 
+	  register_page=home_page.ClickRegisterButton();
+	  register_page.CompleteRegister(Gender,fname,lname,date,month,year,email,pass,
 	  re_pass);
-	  boolean registersuccess=registerpage.registersuccesstext();
+	  boolean registersuccess=register_page.registersuccesstext();
 	  Assert.assertEquals(registersuccess, true);
-	  registerpage.ClickContinueButton();
-	  Assert.assertEquals(registerpage.gettitle(), prop.getProperty("homepagetitle"));
+	  register_page.ClickContinueButton();
+	  Assert.assertEquals(register_page.gettitle(), prop.getProperty("homepagetitle"));
 	  Log.endTestCase("register");
 	  }
 	 

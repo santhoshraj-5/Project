@@ -20,14 +20,14 @@ import com.pageobjects.ShoppingCartPage;
 import com.utility.Log;
 
 public class CheckoutPageTest extends Base {
-	HomePage home;
-	LoginPage loginpage;
-	Comp_NotebookPage notebookpage;
+	HomePage home_page;
+	LoginPage login_page;
+	Comp_NotebookPage notebook_page;
 	NoteBookProductPage product;
-	ShoppingCartPage cartpage;
+	ShoppingCartPage cart_page;
 	BillingAddressPage bill_address;
-	ShippingMethodsPage shippingmethod;
-	PaymentMethodPage payment;
+	ShippingMethodsPage shipping_method;
+	PaymentMethodPage payment_method;
 	PaymentInfoPage payment_info;
 	ConfirmOrderPage order_conf_page;
 @Parameters("browser")
@@ -59,18 +59,18 @@ public class CheckoutPageTest extends Base {
 		Log.startTestCase("completeOrder");
 		LoginTest login=new LoginTest();
 		login.loginTestpostive();
-		home=new HomePage();
-		notebookpage=home.clickNotebook();
-		product=notebookpage.ClickMacbook();
+		home_page=new HomePage();
+		notebook_page=home_page.clickNotebook();
+		product=notebook_page.ClickMacbook();
 		product.ClickAddToCart();
-		cartpage=product.ClickShoppingCart();
-		bill_address=cartpage.ClickCheckout();
+		cart_page=product.ClickShoppingCart();
+		bill_address=cart_page.ClickCheckout();
 		bill_address.completeBilling(firstname,lastname,emailid,country,city,address,pincode,phone);
 		Log.info("billing address is filled");
-		shippingmethod=bill_address.ClickContinue_shipmethod();
-		payment=shippingmethod.ClickContinue();
+		shipping_method=bill_address.ClickContinue_shipmethod();
+		payment_method=shipping_method.ClickContinue();
 		Log.info("shipping method is clicked");
-		payment_info=payment.ClickContinue();
+		payment_info=payment_method.ClickContinue();
 		Log.info("payment method is complete");
 		order_conf_page=payment_info.ClickContinue();
 		order_conf_page.ClickConfirm();

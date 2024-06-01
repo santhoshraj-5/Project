@@ -13,8 +13,8 @@ import com.utility.Log;
 
 public class CartTest extends Base {
 	
-	NoteBookProductPage productpage;
-	ShoppingCartPage cartpage;
+	NoteBookProductPage product_page;
+	ShoppingCartPage cart_page;
 	@Parameters("browser")
 	@BeforeMethod(groups = {"Smoke","Sanity","Regression"})
 	public void setup(String browser) {
@@ -35,18 +35,18 @@ public class CartTest extends Base {
 	public void checkCartProductprice() {
 		Log.startTestCase("checkCartProductprice");
 		MacbookTest macktest=new MacbookTest();
-		macktest.producttest();
-		productpage=new NoteBookProductPage();
-		cartpage=productpage.ClickShoppingCart();
+		macktest.addProductToCart();
+		product_page=new NoteBookProductPage();
+		cart_page=product_page.ClickShoppingCart();
 		Log.info("entered shopping cart");
-		double price=cartpage.getFirstProductPrice();
-		double quantity=cartpage.getQuantityOfFirstProduct();
+		double price=cart_page.getFirstProductPrice();
+		double quantity=cart_page.getQuantityOfFirstProduct();
 		double expected_total=price*quantity;
-		double actual_total=cartpage.getTotalPrice();
+		double actual_total=cart_page.getTotalPrice();
 		System.out.println("product price -"+price+" quantity -"+quantity+" expected_total- "+expected_total);
 		Log.info("got all the values and price in cart page");
 		Assert.assertEquals(actual_total, expected_total);
-		cartpage.ClickCheckout();
+		cart_page.ClickCheckout();
 		Log.endTestCase("checkCartProductprice");
 		
 	}
