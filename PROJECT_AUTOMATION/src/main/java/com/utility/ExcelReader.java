@@ -11,7 +11,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelReader  {
-	private String filelocation="C:\\automation\\PROJECT_AUTOMATION\\src\\test\\resources\\testdata\\project.xlsx";
+	private String filelocation="C:\\Users\\Admin\\git\\Project\\PROJECT_AUTOMATION\\src\\test\\resources\\testdata\\project.xlsx";
 	private XSSFWorkbook wbook;
 	private XSSFSheet sheet;
 	private DataFormatter formate;

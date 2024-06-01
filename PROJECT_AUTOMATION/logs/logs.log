@@ -1,22 +1,75 @@
-[DEBUG] 2024-05-31 18:47:08.207 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-[DEBUG] 2024-05-31 18:47:08.214 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-[DEBUG] 2024-05-31 18:47:08.217 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
-[DEBUG] 2024-05-31 18:47:08.222 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet3.xml.rels
-[DEBUG] 2024-05-31 18:47:08.223 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-[DEBUG] 2024-05-31 18:47:08.685 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-[DEBUG] 2024-05-31 18:47:08.688 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-[DEBUG] 2024-05-31 18:47:08.689 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
-[DEBUG] 2024-05-31 18:47:08.690 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet3.xml.rels
-[DEBUG] 2024-05-31 18:47:08.691 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-[DEBUG] 2024-05-31 18:47:08.767 [main] ZipPackage - Save content types part
-[DEBUG] 2024-05-31 18:47:08.828 [main] ZipPackage - Save package relationships
-[DEBUG] 2024-05-31 18:47:08.836 [main] ZipPackage - Save part 'docProps/app.xml'
-[DEBUG] 2024-05-31 18:47:08.838 [main] ZipPackage - Save part 'docProps/core.xml'
-[DEBUG] 2024-05-31 18:47:08.843 [main] ZipPackage - Save part 'xl/sharedStrings.xml'
-[DEBUG] 2024-05-31 18:47:08.844 [main] ZipPackage - Save part 'xl/styles.xml'
-[DEBUG] 2024-05-31 18:47:08.846 [main] ZipPackage - Save part 'xl/workbook.xml'
-[DEBUG] 2024-05-31 18:47:08.849 [main] ZipPackage - Save part 'xl/worksheets/sheet1.xml'
-[DEBUG] 2024-05-31 18:47:08.853 [main] ZipPackage - Save part 'xl/worksheets/sheet2.xml'
-[DEBUG] 2024-05-31 18:47:08.857 [main] ZipPackage - Save part 'xl/worksheets/sheet3.xml'
-[INFO ] 2024-05-31 18:47:08.883 [main] Log - ------getting driver------
-[INFO ] 2024-05-31 18:47:17.807 [main] Log - =====================================register TEST START=========================================
+[DEBUG] 2024-06-01 14:59:44.583 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2024-06-01 14:59:44.587 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+[DEBUG] 2024-06-01 14:59:44.589 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+[DEBUG] 2024-06-01 14:59:44.590 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet3.xml.rels
+[DEBUG] 2024-06-01 14:59:44.591 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[DEBUG] 2024-06-01 14:59:44.895 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2024-06-01 14:59:44.896 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+[DEBUG] 2024-06-01 14:59:44.896 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+[DEBUG] 2024-06-01 14:59:44.897 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet3.xml.rels
+[DEBUG] 2024-06-01 14:59:44.897 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[DEBUG] 2024-06-01 14:59:44.936 [main] ZipPackage - Save content types part
+[DEBUG] 2024-06-01 14:59:44.969 [main] ZipPackage - Save package relationships
+[DEBUG] 2024-06-01 14:59:44.982 [main] ZipPackage - Save part 'docProps/app.xml'
+[DEBUG] 2024-06-01 14:59:44.983 [main] ZipPackage - Save part 'docProps/core.xml'
+[DEBUG] 2024-06-01 14:59:44.986 [main] ZipPackage - Save part 'xl/sharedStrings.xml'
+[DEBUG] 2024-06-01 14:59:44.986 [main] ZipPackage - Save part 'xl/styles.xml'
+[DEBUG] 2024-06-01 14:59:44.987 [main] ZipPackage - Save part 'xl/workbook.xml'
+[DEBUG] 2024-06-01 14:59:44.989 [main] ZipPackage - Save part 'xl/worksheets/sheet1.xml'
+[DEBUG] 2024-06-01 14:59:44.991 [main] ZipPackage - Save part 'xl/worksheets/sheet2.xml'
+[DEBUG] 2024-06-01 14:59:44.993 [main] ZipPackage - Save part 'xl/worksheets/sheet3.xml'
+[INFO ] 2024-06-01 14:59:45.010 [main] Log - ------getting driver------
+[INFO ] 2024-06-01 14:59:49.034 [main] Log - =====================================register TEST START=========================================
+[INFO ] 2024-06-01 15:00:11.354 [main] Log - ------getting driver------
+[INFO ] 2024-06-01 15:00:19.387 [main] Log - =====================================loginTestpostive TEST START=========================================
+[INFO ] 2024-06-01 15:00:20.698 [main] Log - user password and email is entered
+[INFO ] 2024-06-01 15:00:20.705 [main] Log - =====================================loginTestpostive TEST END=========================================
+[INFO ] 2024-06-01 15:00:20.846 [main] Log - ------getting driver------
+[INFO ] 2024-06-01 15:00:23.844 [main] Log - =====================================producttest TEST START=========================================
+[INFO ] 2024-06-01 15:00:25.491 [main] Log - product quantity is entered
+[INFO ] 2024-06-01 15:00:25.944 [main] Log - =====================================producttest TEST END=========================================
+[INFO ] 2024-06-01 15:00:26.079 [main] Log - ------getting driver------
+[INFO ] 2024-06-01 15:00:28.321 [main] Log - =====================================checkCartProductprice TEST START=========================================
+[INFO ] 2024-06-01 15:00:28.321 [main] Log - =====================================producttest TEST START=========================================
+[INFO ] 2024-06-01 15:00:29.836 [main] Log - product quantity is entered
+[INFO ] 2024-06-01 15:00:30.299 [main] Log - =====================================producttest TEST END=========================================
+[INFO ] 2024-06-01 15:00:45.073 [main] Log - entered shopping cart
+[INFO ] 2024-06-01 15:00:45.137 [main] Log - got all the values and price in cart page
+[INFO ] 2024-06-01 15:00:46.607 [main] Log - =====================================checkCartProductprice TEST END=========================================
+[DEBUG] 2024-06-01 15:00:46.756 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2024-06-01 15:00:46.772 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+[DEBUG] 2024-06-01 15:00:46.772 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+[DEBUG] 2024-06-01 15:00:46.772 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet3.xml.rels
+[DEBUG] 2024-06-01 15:00:46.772 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[DEBUG] 2024-06-01 15:00:46.787 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2024-06-01 15:00:46.803 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+[DEBUG] 2024-06-01 15:00:46.803 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+[DEBUG] 2024-06-01 15:00:46.803 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet3.xml.rels
+[DEBUG] 2024-06-01 15:00:46.803 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[DEBUG] 2024-06-01 15:00:46.819 [main] ZipPackage - Save content types part
+[DEBUG] 2024-06-01 15:00:46.819 [main] ZipPackage - Save package relationships
+[DEBUG] 2024-06-01 15:00:46.819 [main] ZipPackage - Save part 'docProps/app.xml'
+[DEBUG] 2024-06-01 15:00:46.819 [main] ZipPackage - Save part 'docProps/core.xml'
+[DEBUG] 2024-06-01 15:00:46.819 [main] ZipPackage - Save part 'xl/sharedStrings.xml'
+[DEBUG] 2024-06-01 15:00:46.819 [main] ZipPackage - Save part 'xl/styles.xml'
+[DEBUG] 2024-06-01 15:00:46.819 [main] ZipPackage - Save part 'xl/workbook.xml'
+[DEBUG] 2024-06-01 15:00:46.819 [main] ZipPackage - Save part 'xl/worksheets/sheet1.xml'
+[DEBUG] 2024-06-01 15:00:46.819 [main] ZipPackage - Save part 'xl/worksheets/sheet2.xml'
+[DEBUG] 2024-06-01 15:00:46.819 [main] ZipPackage - Save part 'xl/worksheets/sheet3.xml'
+[INFO ] 2024-06-01 15:00:46.819 [main] Log - ------getting driver------
+[INFO ] 2024-06-01 15:00:49.805 [main] Log - =====================================completeOrder TEST START=========================================
+[INFO ] 2024-06-01 15:00:49.805 [main] Log - =====================================loginTestpostive TEST START=========================================
+[INFO ] 2024-06-01 15:00:51.671 [main] Log - user password and email is entered
+[INFO ] 2024-06-01 15:00:51.675 [main] Log - =====================================loginTestpostive TEST END=========================================
+[INFO ] 2024-06-01 15:01:09.835 [main] Log - firstname entered
+[INFO ] 2024-06-01 15:01:09.863 [main] Log - lastname entered
+[INFO ] 2024-06-01 15:01:09.875 [main] Log - emailid entered
+[INFO ] 2024-06-01 15:01:09.886 [main] Log - country entered
+[INFO ] 2024-06-01 15:01:09.921 [main] Log - address entered
+[INFO ] 2024-06-01 15:01:09.944 [main] Log - pincode
+[INFO ] 2024-06-01 15:01:09.952 [main] Log - phone
+[INFO ] 2024-06-01 15:01:09.968 [main] Log - city
+[INFO ] 2024-06-01 15:01:09.968 [main] Log - billing address is filled
+[INFO ] 2024-06-01 15:01:11.181 [main] Log - shipping method is clicked
+[INFO ] 2024-06-01 15:01:12.848 [main] Log - payment method is complete
+[INFO ] 2024-06-01 15:01:13.509 [main] Log - =====================================completeOrder TEST END=========================================
