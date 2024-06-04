@@ -1,5 +1,6 @@
 package com.actiondriver;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.openqa.selenium.WebElement;
@@ -10,7 +11,7 @@ public interface Seleniumaction {
 	void appendtext(WebElement element,String value);
 	String geturl();
 	String gettitle();
-	void take_screenshot(String path) throws IOException;
+	File take_screenshot(String path) throws IOException;
 	boolean isdisplayed(WebElement element);
 	void SelectDropdown(WebElement element,String value);
 	void mouseover(WebElement element);

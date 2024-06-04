@@ -2,6 +2,8 @@ package com.actiondriver;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 
 import org.openqa.selenium.Alert;
@@ -128,11 +130,13 @@ public class Seleniumactions extends Base implements Seleniumaction {
 	 * @param screenshotname this method will be used to take screenshot
 	 */
 	@Override
-	public void take_screenshot(String screenshotname) throws IOException {
+	public File take_screenshot(String screenshotname) throws IOException {
+		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new java.util.Date());
 		TakesScreenshot ss = (TakesScreenshot) getDriver();
 		File screen_path = ss.getScreenshotAs(OutputType.FILE);
-		File destinatio = new File("./screenshots/" + screenshotname+".png");
-		FileHandler.copy(screen_path, destinatio);
+		File destination = new File("./screenshots/" + screenshotname+" - "+ dateName +".png");
+		FileHandler.copy(screen_path, destination);
+		return destination;
 	}
 
 	

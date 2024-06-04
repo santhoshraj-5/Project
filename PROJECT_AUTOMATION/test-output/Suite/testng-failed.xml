@@ -1,19 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
-    <groups>
-      <run>
-        <include name="Regression"/>
-      </run>
-    </groups>
+  <test thread-count="5" name="RegisterTest(failed)">
+    <classes>
+      <class name="testcases.RegisterTest">
+        <methods>
+          <include name="before"/>
+          <include name="tearDown"/>
+          <include name="register" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testcases.RegisterTest -->
+    </classes>
+  </test> <!-- RegisterTest(failed) -->
+  <test thread-count="5" name="LoginTest(failed)">
+    <classes>
+      <class name="testcases.LoginTest">
+        <methods>
+          <include name="loginTestpostive"/>
+          <include name="setup"/>
+          <include name="loginTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testcases.LoginTest -->
+    </classes>
+  </test> <!-- LoginTest(failed) -->
+  <test thread-count="5" name="MacbookTest(failed)">
+    <classes>
+      <class name="testcases.MacbookTest">
+        <methods>
+          <include name="setup"/>
+          <include name="addProductToCart"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testcases.MacbookTest -->
+    </classes>
+  </test> <!-- MacbookTest(failed) -->
+  <test thread-count="5" name="CartTest(failed)">
+    <classes>
+      <class name="testcases.CartTest">
+        <methods>
+          <include name="checkCartProductprice"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcases.CartTest -->
+    </classes>
+  </test> <!-- CartTest(failed) -->
+  <test thread-count="5" name="NotebookPageTest(failed)">
+    <classes>
+      <class name="testcases.NotebookPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="computerTest"/>
+          <include name="before"/>
+        </methods>
+      </class> <!-- testcases.NotebookPageTest -->
+    </classes>
+  </test> <!-- NotebookPageTest(failed) -->
+  <test thread-count="5" name="ComputerPageTest(failed)">
+    <classes>
+      <class name="testcases.ComputerPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="checkNavigation"/>
+          <include name="checkImageAndTextPresent"/>
+          <include name="before"/>
+        </methods>
+      </class> <!-- testcases.ComputerPageTest -->
+    </classes>
+  </test> <!-- ComputerPageTest(failed) -->
+  <test thread-count="5" name="checkoutpage(failed)">
     <classes>
       <class name="testcases.CheckoutPageTest">
         <methods>
-          <include name="before"/>
-          <include name="completeOrder" invocation-numbers="0"/>
+          <include name="setup"/>
+          <include name="completeOrder"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- testcases.CheckoutPageTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- checkoutpage(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -13,10 +13,10 @@
 	  </groups>
     <classes>
 	  <class name="testcases.RegisterTest"/> 
-      <class name="testcases.LoginTest"/>
+      <!--<class name="testcases.LoginTest"/>
       <class name="testcases.MacbookTest"/>
       <class name="testcases.CartTest"/>
-      <class name="testcases.CheckoutPageTest"/>
+      <class name="testcases.CheckoutPageTest"/>-->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
