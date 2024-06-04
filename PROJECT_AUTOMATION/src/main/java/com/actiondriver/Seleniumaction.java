@@ -11,7 +11,7 @@ public interface Seleniumaction {
 	void appendtext(WebElement element,String value);
 	String geturl();
 	String gettitle();
-	File take_screenshot(String path) throws IOException;
+	String take_screenshot(String path) throws IOException;
 	boolean isdisplayed(WebElement element);
 	void SelectDropdown(WebElement element,String value);
 	void mouseover(WebElement element);

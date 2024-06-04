@@ -130,12 +130,12 @@ public class Seleniumactions extends Base implements Seleniumaction {
 	 * @param screenshotname this method will be used to take screenshot
 	 */
 	@Override
-	public File take_screenshot(String screenshotname) throws IOException {
+	public String take_screenshot(String screenshotname) throws IOException {
 		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new java.util.Date());
 		TakesScreenshot ss = (TakesScreenshot) getDriver();
 		File screen_path = ss.getScreenshotAs(OutputType.FILE);
-		File destination = new File("./screenshots/" + screenshotname+" - "+ dateName +".png");
-		FileHandler.copy(screen_path, destination);
+		String destination = System.getProperty("user.dir") +"/screenshots/" + screenshotname+" - "+ dateName +".png";
+		FileHandler.copy(screen_path, new File(destination));
 		return destination;
 	}
 

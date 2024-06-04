@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite parallel="tests" name="crossBrowser">
+	<listeners>
+		<listener class-name="com.utility.Listener"></listener>
+	</listeners>
   <test thread-count="5"  name="chromebrowser">
 	  <parameter name="browser" value="chrome"></parameter>
 	  <groups><run>
@@ -11,7 +14,7 @@
       <class name="testcases.ComputerPageTest"/>
     </classes>
   </test> <!-- Test -->
-  <test thread-count="5" parallel="tests" name="firefox">
+  <test thread-count="5"  name="firefox">
 	  <parameter name="browser" value="firefox"></parameter>
 	  <groups><run>
 		  <include name="Smoke"></include>

@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite parallel="tests" name="Failed suite [crossBrowser]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="tests" name="firefox(failed)">
-    <parameter name="browser" value="firefox"/>
-    <groups>
-      <run>
-        <include name="Smoke"/>
-      </run>
-    </groups>
-    <classes>
-      <class name="testcases.ComputerPageTest">
-        <methods>
-          <include name="checkNavigation"/>
-          <include name="checkImageAndTextPresent"/>
-          <include name="before"/>
-        </methods>
-      </class> <!-- testcases.ComputerPageTest -->
-    </classes>
-  </test> <!-- firefox(failed) -->
   <test thread-count="5" parallel="tests" name="chromebrowser(failed)">
     <parameter name="browser" value="chrome"/>
     <groups>
@@ -28,10 +11,32 @@
     <classes>
       <class name="testcases.NotebookPageTest">
         <methods>
+          <include name="closeExtentReport"/>
+          <include name="tearDown"/>
           <include name="computerTest"/>
+          <include name="extentReportStart"/>
           <include name="before"/>
         </methods>
       </class> <!-- testcases.NotebookPageTest -->
     </classes>
   </test> <!-- chromebrowser(failed) -->
+  <test thread-count="5" parallel="tests" name="firefox(failed)">
+    <parameter name="browser" value="firefox"/>
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testcases.ComputerPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="closeExtentReport"/>
+          <include name="checkImageAndTextPresent"/>
+          <include name="extentReportStart"/>
+          <include name="before"/>
+        </methods>
+      </class> <!-- testcases.ComputerPageTest -->
+    </classes>
+  </test> <!-- firefox(failed) -->
 </suite> <!-- Failed suite [crossBrowser] -->

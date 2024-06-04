@@ -10,34 +10,42 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import com.actiondriver.Seleniumactions;
+import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 
 public class Listener extends ExtentManager implements ITestListener{
-
+	public  ExtentTest report_test;
+	
+	//we have added thread safety for parallel run and mainly during crossbrowser parallel run we got mismatch logs  
+	ThreadLocal<ExtentTest>extenttest= new ThreadLocal<ExtentTest>();
 	public void onTestStart(ITestResult result) {
 		//during every test start
 	    System.out.println("on test start listner");
 	    report_test=extent.createTest(result.getName());
+	    extenttest.set(report_test);
 	  }
 	public void onTestSuccess(ITestResult result) {
 		//after one test method pass
 		 System.out.println("on test success listner");
 		 if (result.getStatus() == ITestResult.SUCCESS) {
-			 report_test.log(Status.PASS, "Pass Test case is: " + result.getName());
+			 extenttest.get().log(Status.PASS, "Pass Test case is: " + result.getName());//extenttest.get()
 			}
 	  }
 	public void onTestFailure(ITestResult result) {
 		//after one test method fail
 		 System.out.println("on test fail listner");
+		 
 		 if (result.getStatus() == ITestResult.FAILURE) {
-			 report_test.log(Status.FAIL, "fail Test case is: " + result.getName());
+			 extenttest.get().log(Status.FAIL, "fail Test case is: " + result.getName());
+			 extenttest.get().fail(result.getThrowable());
 			}
 		 Seleniumactions action=new Seleniumactions();
 		 try {
-			File screenshootpath=action.take_screenshot(result.getName());
-			String path= FileUtils.readFileToString(screenshootpath);
-			report_test.addScreenCaptureFromPath(path);
+			String screenshootpath=action.take_screenshot(result.getName());
+			//String path= FileUtils.readFileToString(screenshootpath);
+			extenttest.get().addScreenCaptureFromPath(screenshootpath, "fail Test case is: " + result.getName());
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -46,7 +54,7 @@ public class Listener extends ExtentManager implements ITestListener{
 		//after one test is skipped
 		 System.out.println("on test skip listner");
 		 if (result.getStatus() == ITestResult.SKIP) {
-			 report_test.log(Status.SKIP, "Skipped Test case is: " + result.getName());
+			 extenttest.get().log(Status.SKIP, "Skipped Test case is: " + result.getName());
 			}
 		  }
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
