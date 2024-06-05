@@ -1,24 +1,12 @@
-[INFO ] 2024-06-04 18:41:09.521 [TestNG-tests-1] Log - ------getting driver------
-[INFO ] 2024-06-04 18:41:09.521 [TestNG-tests-2] Log - ------getting driver------
-[INFO ] 2024-06-04 18:41:13.134 [TestNG-tests-1] Log - =====================================computerTest TEST START=========================================
-[INFO ] 2024-06-04 18:41:13.403 [TestNG-tests-2] Log - =====================================computerTest TEST START=========================================
-[INFO ] 2024-06-04 18:41:14.675 [TestNG-tests-1] Log - notebook page all image is present and text are present
-[INFO ] 2024-06-04 18:41:14.675 [TestNG-tests-1] Log - =====================================computerTest TEST END=========================================
-[INFO ] 2024-06-04 18:41:14.785 [TestNG-tests-1] Log - ------getting driver------
-[INFO ] 2024-06-04 18:41:16.569 [TestNG-tests-2] Log - notebook page all image is present and text are present
-[INFO ] 2024-06-04 18:41:16.569 [TestNG-tests-2] Log - =====================================computerTest TEST END=========================================
-[INFO ] 2024-06-04 18:41:17.189 [TestNG-tests-2] Log - ------getting driver------
-[INFO ] 2024-06-04 18:41:17.301 [TestNG-tests-1] Log - =====================================checkImageAndTextPresent TEST START=========================================
-[INFO ] 2024-06-04 18:41:17.909 [TestNG-tests-1] Log - desktop image checked
-[INFO ] 2024-06-04 18:41:17.982 [TestNG-tests-1] Log - all Image and text is checked
-[INFO ] 2024-06-04 18:41:17.982 [TestNG-tests-1] Log - =====================================checkImageAndTextPresent TEST END=========================================
-[INFO ] 2024-06-04 18:41:18.123 [TestNG-tests-1] Log - ------getting driver------
-[INFO ] 2024-06-04 18:41:20.015 [TestNG-tests-2] Log - =====================================checkImageAndTextPresent TEST START=========================================
-[INFO ] 2024-06-04 18:41:20.547 [TestNG-tests-2] Log - desktop image checked
-[INFO ] 2024-06-04 18:41:20.595 [TestNG-tests-2] Log - all Image and text is checked
-[INFO ] 2024-06-04 18:41:20.595 [TestNG-tests-2] Log - =====================================checkImageAndTextPresent TEST END=========================================
-[INFO ] 2024-06-04 18:41:21.167 [TestNG-tests-1] Log - =====================================checkNavigation TEST START=========================================
-[INFO ] 2024-06-04 18:41:21.325 [TestNG-tests-2] Log - ------getting driver------
-[INFO ] 2024-06-04 18:41:23.943 [TestNG-tests-2] Log - =====================================checkNavigation TEST START=========================================
-[INFO ] 2024-06-04 18:41:25.320 [TestNG-tests-1] Log - =====================================checkNavigation TEST END=========================================
-[INFO ] 2024-06-04 18:41:28.094 [TestNG-tests-2] Log - =====================================checkNavigation TEST END=========================================
+[INFO ] 2024-06-05 12:17:15.680 [TestNG-test=Test-2] Log - ------getting driver------
+[INFO ] 2024-06-05 12:17:15.680 [TestNG-test=Test-1] Log - ------getting driver------
+[INFO ] 2024-06-05 12:17:18.596 [TestNG-test=Test-2] Log - =====================================checkImageAndTextPresent TEST START=========================================
+[INFO ] 2024-06-05 12:17:19.172 [TestNG-test=Test-1] Log - =====================================computerTest TEST START=========================================
+[INFO ] 2024-06-05 12:17:20.101 [TestNG-test=Test-2] Log - desktop image checked
+[INFO ] 2024-06-05 12:17:20.301 [TestNG-test=Test-2] Log - all Image and text is checked
+[INFO ] 2024-06-05 12:17:20.301 [TestNG-test=Test-2] Log - =====================================checkImageAndTextPresent TEST END=========================================
+[INFO ] 2024-06-05 12:17:20.463 [TestNG-test=Test-2] Log - ------getting driver------
+[INFO ] 2024-06-05 12:17:20.622 [TestNG-test=Test-1] Log - notebook page all image is present and text are present
+[INFO ] 2024-06-05 12:17:20.622 [TestNG-test=Test-1] Log - =====================================computerTest TEST END=========================================
+[INFO ] 2024-06-05 12:17:21.926 [TestNG-test=Test-2] Log - =====================================checkNavigation TEST START=========================================
+[INFO ] 2024-06-05 12:17:25.639 [TestNG-test=Test-2] Log - =====================================checkNavigation TEST END=========================================

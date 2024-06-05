@@ -29,26 +29,38 @@
     <documentTitle>nocommerce demo test</documentTitle>
 
     <!-- report name - displayed at top-nav -->
-    <reportName>Build 1</reportName>
+    <reportName><![CDATA[
+                <img src='C:\Users\Admin\git\Project\PROJECT_AUTOMATION\logo\logo.png'/>
+            ]]></reportName>
 
     <!-- timestamp format -->
     <timeStampFormat>MMM dd, yyyy HH:mm:ss</timeStampFormat>
-
-    <!-- custom javascript -->
+    
     <scripts>
-      <![CDATA[
-        $(document).ready(function() {
-            
-        });
-      ]]>
+            <![CDATA[
+                $(document).ready(function() {
+                    
+                });
+            ]]>
     </scripts>
 
     <!-- custom styles -->
     <styles>
-      <![CDATA[
-      
-      ]]>
-    </styles>
+            <![CDATA[
+                .report-name {
+                    padding-left: 18px;
+                    background-color: white !important; /* Set background color to white */
+                }
+                .report-name > img {
+                    float: left;
+                    height: 90%;
+                    margin-left: 30px;
+                    margin-top: 3px;
+                    width: auto;
+                }
+            ]]>
+        </styles>
+   
 
   </configuration>
 </extentreports>
