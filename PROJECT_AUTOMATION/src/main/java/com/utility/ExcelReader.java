@@ -21,7 +21,6 @@ public class ExcelReader  {
 		 try {
 			wbook=new XSSFWorkbook(filelocation);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -43,21 +42,17 @@ public class ExcelReader  {
 	
 //change for login test i=1
 	public String[][] readxl(String sheetname)throws IOException{ 
-		 try {
-				wbook=new XSSFWorkbook(filelocation);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+
 		sheet=wbook.getSheet(sheetname);
 		//XSSFSheet sheet=wbook.getSheetAt(0);
-		int row_count=sheet.getPhysicalNumberOfRows();
+		int row_count=sheet.getPhysicalNumberOfRows();//including header
 		//int row_count=sheet.getLastRowNum();
 		System.out.println("row count in excel "+row_count);
 		short cell_count=sheet.getRow(0).getLastCellNum();
 		System.out.println("cell count in excel "+cell_count);
 		formate=new DataFormatter();
-		String[][] xlvalues=new String[row_count-1][cell_count];
-		for(int i=1;i<row_count;i++) {
+		String[][] xlvalues=new String[row_count-1][cell_count];//here header is not taken
+		for(int i=1;i<row_count;i++) {//
 			   row=sheet.getRow(i);
 			for(int j=0;j<cell_count;j++) {
 				cell=row.getCell(j);
@@ -72,7 +67,34 @@ public class ExcelReader  {
 		}
 		return xlvalues;
 	}
+	
+	public String[][] readxlinHasMap(String sheetname)throws IOException{ 
+
+		sheet=wbook.getSheet(sheetname);
+		//XSSFSheet sheet=wbook.getSheetAt(0);
+		int row_count=sheet.getPhysicalNumberOfRows();//including header
+		//int row_count=sheet.getLastRowNum();
+		System.out.println("row count in excel "+row_count);
+		short cell_count=sheet.getRow(0).getLastCellNum();
+		System.out.println("cell count in excel "+cell_count);
+		formate=new DataFormatter();
+		String[][] xlvalues=new String[row_count][cell_count];//here header is not taken
+		for(int i=0;i<row_count;i++) {//
+			   row=sheet.getRow(i);
+			for(int j=0;j<cell_count;j++) {
+				cell=row.getCell(j);
+				String value=formate.formatCellValue(cell);
+				xlvalues[i][j]=value;
+			}
+		}
+		try {
+			wbook.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return xlvalues;
 	 
+}
 }
 	
 

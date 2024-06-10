@@ -9,7 +9,7 @@ import org.testng.annotations.DataProvider;
 import com.utility.ExcelReader;
 
 public class Dataprovider {
-	ExcelReader exlreader=new ExcelReader();
+	private ExcelReader exlreader=new ExcelReader();
 	
 	/**
 	 * this method is used for reading both positive and negative test case in login
@@ -23,30 +23,35 @@ public class Dataprovider {
 	}
 
 
-	/*
-	 * @DataProvider(name = "registerdata") public Object[][] registerdata() throws
-	 * IOException{ String[][]regdata=exlreader.readxl("register_data"); Object[][]
-	 * data = new Object[regdata.length-1][0]; System.out.println(regdata.length
-	 * +"--row count"); System.out.println(regdata[0].length +"--cell count");
-	 * for(int i=1;i<regdata.length-1;i++) { Map<String, String>hashmap= new
-	 * HashMap<>(); for(int j=0;j<regdata[0].length;j++) {
-	 * hashmap.put(regdata[0][j], regdata[i][j]); } data[i-1][0]=hashmap;
-	 * 
-	 * }
-	 * 
-	 * 
-	 * return data; }
-	 */
+	
+	  @DataProvider(name = "registerdata") 
+	  public Object[][] registerdata() throws IOException{ 
+		  String[][]regdata=exlreader.readxlinHasMap("register_data"); 
+		  Object[][] data = new Object[regdata.length-1][1];// 2-1[1]
+		  System.out.println(regdata.length+"--row count"); 
+		  System.out.println(regdata[0].length +"--cell count");
+	  for(int i=1;i<regdata.length;i++) {
+		  Map<String, String>hashmap= new HashMap<>(); 
+		  for(int j=0;j<regdata[0].length;j++) {
+	  hashmap.put(regdata[0][j], regdata[i][j]);
+	  } 
+		  data[i-1][0]=hashmap;
+	  
+	  }
+	  
+	  return data; }
+	 
 
 	/**
 	 * this method will read the register data (as of now we have only one data
 	 * @return
 	 * @throws IOException
 	 */
-	  @DataProvider(name = "registerdata") 
-	  public Object[][] registerdata() throws IOException{ 
-		  String[][]regdata=exlreader.readxl("register_data"); 
-		  return regdata; }
+	/*
+	 * @DataProvider(name = "registerdata") public Object[][] registerdata() throws
+	 * IOException{ String[][]regdata=exlreader.readxl("register_data"); return
+	 * regdata; }
+	 */
 	  
 	  @DataProvider(name="billingaddress")
 	  public Object[][] billingaddress()throws IOException{

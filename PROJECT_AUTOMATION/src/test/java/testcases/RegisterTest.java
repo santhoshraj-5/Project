@@ -1,5 +1,7 @@
 package testcases;
 
+import java.util.HashMap;
+
 //import java.util.HashMap;
 
 import org.testng.Assert;
@@ -30,15 +32,22 @@ public class RegisterTest extends Base {
 	/** 
 	 * this method will be used by hashmap arguments 
 	 */
-	/*
-	 * @Test(dataProvider = "registerdata",dataProviderClass = Dataprovider.class)
-	 * public void register(HashMap<String, String>map) {
-	 * 
-	 * registerpage=home.ClickRegisterButton();
-	 * registerpage.CompleteRegister(map.get("Gender"), map.get("FirstName"),
-	 * map.get("LastName"), map.get("Date"), map.get("Month"), map.get("Year"),
-	 * map.get("Email"), map.get("Password"), map.get("Re-password")); }
-	 */
+	
+	@Test(dataProvider = "registerdata",dataProviderClass = Dataprovider.class,groups={"Regression","Sanity"})
+	public void register(HashMap<String, String>map) {
+		Log.startTestCase("register");
+		home_page=new HomePage();
+		register_page=home_page.ClickRegisterButton();
+		register_page.CompleteRegister(map.get("Gender"), map.get("FirstName"),
+				map.get("LastName"), map.get("Date"), map.get("Month"), map.get("Year"),
+				map.get("Email"), map.get("Password"), map.get("Re-password")); 
+		boolean registersuccess=register_page.registersuccesstext();
+		Assert.assertEquals(registersuccess, true);
+		register_page.ClickContinueButton();
+		Assert.assertEquals(register_page.gettitle(),
+		prop.getProperty("homepagetitle")); 
+		Log.endTestCase("register"); }
+	 
 	 
 	
 	/**
@@ -53,20 +62,20 @@ public class RegisterTest extends Base {
 	 * @param pass
 	 * @param re_pass
 	 */
-	  @Test(dataProvider = "registerdata",dataProviderClass = Dataprovider.class,groups={"Regression","Sanity"})
-	  public void register(String Gender,String fname,String lname, String
-	  date,String month,String year, String email,String pass,String re_pass){
-		  Log.startTestCase("register");
-	  home_page=new HomePage(); 
-	  register_page=home_page.ClickRegisterButton();
-	  register_page.CompleteRegister(Gender,fname,lname,date,month,year,email,pass,
-	  re_pass);
-	  boolean registersuccess=register_page.registersuccesstext();
-	  Assert.assertEquals(registersuccess, true);
-	  register_page.ClickContinueButton();
-	  Assert.assertEquals(register_page.gettitle(), prop.getProperty("homepagetitle"));
-	  Log.endTestCase("register");
-	  }
+	/*
+	 * @Test(dataProvider = "registerdata",dataProviderClass =
+	 * Dataprovider.class,groups={"Regression","Sanity"}) public void
+	 * register(String Gender,String fname,String lname, String date,String
+	 * month,String year, String email,String pass,String re_pass){
+	 * Log.startTestCase("register"); home_page=new HomePage();
+	 * register_page=home_page.ClickRegisterButton();
+	 * register_page.CompleteRegister(Gender,fname,lname,date,month,year,email,pass,
+	 * re_pass); boolean registersuccess=register_page.registersuccesstext();
+	 * Assert.assertEquals(registersuccess, true);
+	 * register_page.ClickContinueButton();
+	 * Assert.assertEquals(register_page.gettitle(),
+	 * prop.getProperty("homepagetitle")); Log.endTestCase("register"); }
+	 */
 	 
 
 }
